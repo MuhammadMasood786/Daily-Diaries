@@ -2,7 +2,7 @@ import { Response, Request } from "miragejs";
 import { handleErrors } from "../server";
 import { User } from "../../../interfaces/user.interface";
 import { randomBytes } from "crypto";
-import userEvent from "@testing-library/user-event";
+
 
 const generateToken = () => randomBytes(8).toString("hex");
 

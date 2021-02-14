@@ -1,7 +1,7 @@
 export interface Diary {
     id?:string;
     title:string;
-    typeof:'private'| 'public';
+    type:'private'| 'public';
     content:string;
     createdAt?:string;
     updatedAt?:string;
