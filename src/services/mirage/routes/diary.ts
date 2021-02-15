@@ -1,11 +1,11 @@
 import { Response, Request } from "miragejs";
 import { handleErrors } from "../server";
 import { User } from "../../../interfaces/user.interface";
-import { randomBytes } from "crypto";
+
 import { Diary } from "../../../interfaces/diary.interface";
 import dayjs from "dayjs";
 import { Entry } from "../../../interfaces/entry.interface";
-import { date } from "yup";
+
 
 // Create diaries
 export const create = (
