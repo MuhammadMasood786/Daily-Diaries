@@ -90,6 +90,7 @@ const Auth: FC = () => {
                     </div>
                     <p
                         onClick={() => setIsLogin(!isLogin)}
+                        style={{cursor:'pointer',opacity:0.7}}
                     >
                         {isLogin ? 'No account? Create one' : 'Already have account'}
                     </p>
