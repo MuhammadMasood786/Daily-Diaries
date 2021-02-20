@@ -28,6 +28,6 @@ const auth = createSlice({
   },
 });
 
-const { saveToken, clearToken, setAuthState } = auth.actions;
+export const { saveToken, clearToken, setAuthState } = auth.actions;
 
 export default auth.reducer;

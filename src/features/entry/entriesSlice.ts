@@ -10,9 +10,7 @@ const entries = createSlice({
     },
     updateEntry: (state, { payload }: PayloadAction<Entry>) => {
       const { id } = payload;
-      const entryIndex = state.findIndex((item) => {
-        item.id === id;
-      });
+      const entryIndex = state.findIndex((item) =>item.id === id);
       if (entryIndex !== -1) {
         state.splice(entryIndex, 0, payload);
       }

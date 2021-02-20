@@ -7,17 +7,13 @@ const diaries = createSlice({
   reducers: {
     addDiary: (state, { payload }: PayloadAction<Diary[]>) => {
       const diariesToSave = payload.filter((diary) => {
-        return 
-          state.findIndex((item) =>item.id === diary.id) === -1
-        ;
+        return state.findIndex((item) => item.id === diary.id) === -1;
+        state.push(...diariesToSave);
       });
-      state.push(...diariesToSave);
     },
     updateDiary: (state, { payload }: PayloadAction<Diary>) => {
       const { id } = payload;
-      const diaryIndex = state.findIndex((item) => {
-        item.id === id;
-      });
+      const diaryIndex = state.findIndex((item) => item.id === id);
       if (diaryIndex !== -1) {
         state.splice(diaryIndex, 1, payload);
       }
@@ -27,4 +23,3 @@ const diaries = createSlice({
 
 const { addDiary, updateDiary } = diaries.actions;
 export default diaries.reducer;
-

@@ -5,7 +5,7 @@ import { RootState } from '../rootReducers'
 
 
 const Auth = lazy(() => import('../features/auth/Auth'))
-// const Home = lazy(() => import('../features/home/Home'))
+const Home = lazy(() => import('../features/auth/Home'))
 
 
 const App: FC = () => {
@@ -19,7 +19,7 @@ const App: FC = () => {
           <Route path="/">
             <Suspense fallback={<p>Loading...</p>}>
               {
-                // isLoggedIn ? <Home /> : <Auth />
+                isLoggedIn ? <Home /> : <Auth />
               }
             </Suspense>
           </Route>
