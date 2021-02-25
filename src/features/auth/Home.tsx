@@ -1,19 +1,16 @@
-import React, { FC, useState } from "react";
-import DiaryTile from "../diary/DiaryTile";
+import React, { FC } from "react";
 import Editor from "../entry/Editor";
-
+import Diaries from '.././diary/Diaries'
 
 const Home: FC = () => {
 
     return (
-        <div className="auth">
-            <div className="row">
-                <div className="col-lg-8">
-                    <Editor />
-                </div>
-                <div className="col-lg-8">
-                    {/* <DiaryTile /> */}
-                </div>
+        <div className="two-cols">
+            <div className="left">
+                <Diaries />
+            </div>
+            <div className="right">
+                <Editor />
             </div>
         </div>
     )
